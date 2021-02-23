@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>map2gazebo</name>
+  <version>0.0.0</version>
+  <description>The map2gazebo package</description>
+
+  <maintainer email="shilohc@mit.edu">Shiloh Curtis</maintainer>
+  <author email="shilohc@mit.edu">Shiloh Curtis</author>
+  <license>MIT</license>
+
+  <depend>rclpy</depend>
+  <depend>nav_msgs</depend>
+  <depend>ament_copyright</depend>
+  <depend>ament_flake8</depend>
+  <depend>ament_pep257</depend>
+  <depend>python3-pytest</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
