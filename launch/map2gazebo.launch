@@ -1,0 +1,9 @@
+<launch>
+  <arg name="params_file" default="$(find map2gazebo)/config/defaults.yaml" />
+  <arg name="export_dir" default="$(find map2gazebo)/models/map/meshes" />
+
+  <node name="map2gazebo" pkg="map2gazebo" type="map2gazebo.py" output="screen" >
+    <param name="export_dir" value="$(arg export_dir)" />
+    <rosparam command="load" file="$(arg params_file)" />
+  </node>
+</launch>
