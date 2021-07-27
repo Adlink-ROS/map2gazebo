@@ -94,6 +94,37 @@ python3 src/map2gazebo/src/map2gazebo_offline.py --map_dir /path/to/map/mememan.
 
 Here we provide an usage example to show the converted model in Gazebo.
 
+## Online conversion
+
+* Run NeuronBot
+
+```bash
+# terminal 1
+ros2 launch neuronbot2_gazebo  neuronbot2_world.launch.py
+# terminal 2
+ros2 launch neuronbot2_slam  gmapping_launch.py open_rviz:=true use_sim_time:=true
+# terminal 3
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
+
+* Do some SLAM...
+
+* Convert the stl, which will saved under current folder.
+
+```bash
+ros2 launch map2gazebo map2gazebo.launch.py
+```
+
+* Run Gazebo
+
+```bash
+mv map.stl src/map2gazebo/models/map/meshes/
+export GAZEBO_MODEL_PATH=$HOME/map2gz_ros2_ws/src/map2gazebo/models/
+gazebo src/map2gazebo/worlds/map.sdf
+```
+
+## Offline conversion
+
 * Create your map (or download our template)
 
 ```bash
