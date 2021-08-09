@@ -63,8 +63,8 @@ pip3 install --user opencv-contrib-python
 2. Git clone map2gazebo and build package
 
 ```bash
-mkdir -p map2gz_ros2_ws/src
-cd map2gz_ros2_ws/src
+mkdir -p ~/map2gz_ros2_ws/src
+cd ~/map2gz_ros2_ws/src
 git clone https://github.com/Adlink-ROS/map2gazebo.git -b foxy-devel
 cd ..
 colcon build --symlink-install
